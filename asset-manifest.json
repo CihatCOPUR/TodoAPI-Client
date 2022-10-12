@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/CihatCOPUR/First-react-app/static/css/main.3a34374c.css",
+    "main.js": "/CihatCOPUR/First-react-app/static/js/main.45655c01.js",
+    "static/js/787.d60e9a6d.chunk.js": "/CihatCOPUR/First-react-app/static/js/787.d60e9a6d.chunk.js",
+    "static/media/middle.webp": "/CihatCOPUR/First-react-app/static/media/middle.a50fe75d5068980bcde0.webp",
+    "index.html": "/CihatCOPUR/First-react-app/index.html",
+    "main.3a34374c.css.map": "/CihatCOPUR/First-react-app/static/css/main.3a34374c.css.map",
+    "main.45655c01.js.map": "/CihatCOPUR/First-react-app/static/js/main.45655c01.js.map",
+    "787.d60e9a6d.chunk.js.map": "/CihatCOPUR/First-react-app/static/js/787.d60e9a6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a34374c.css",
+    "static/js/main.45655c01.js"
+  ]
+}
