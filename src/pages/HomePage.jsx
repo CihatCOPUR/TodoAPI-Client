@@ -55,11 +55,11 @@ const HomePage = () => {
         className="mb-3"
       >
         <Tab eventKey="todo" title="todo" style={{ width: "40%" }}>
-          {/* <ul className="todoList" style={{paddingRight:'32px'}}>
+          <ul className="todoList" style={{paddingRight:'32px'}}>
           {todoData.map(todo => (
             <li key={todo.id} style={{width:'100%', listStyleType:'none', border:'1px solid black', borderRadius:'5px', marginTop:'5px', backgroundColor:'007F73', color:'4CCD99'}}>{todo.name}</li>
           ))}
-        </ul> */}
+        </ul>
         </Tab>
         <Tab eventKey="end" title="end">
           end
