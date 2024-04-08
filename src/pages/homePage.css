@@ -1,4 +1,11 @@
+body{
+    background-color: rgb(177, 233, 215);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 Form{
-    width: 40%;
+    width: 50% !important;
+    
 };
 
