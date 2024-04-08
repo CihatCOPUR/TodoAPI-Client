@@ -9,7 +9,7 @@ const TodoList = ({ todos, onDelete, onComplete }) => {
   return (
     <ul className="todoList" style={{ paddingRight: "32px" }}>
       {sortedTodos.map((todo) => (
-        <Card key={todo.id} style={{ marginBottom: "10px" }}>
+        <Card key={todo.id} style={{ margin: "30px 0px 30px 0px" }}>
           <Card.Body>
             <Card.Title>{todo.name}</Card.Title>
             <Card.Text>{todo.description}</Card.Text>
@@ -22,10 +22,7 @@ const TodoList = ({ todos, onDelete, onComplete }) => {
                 Complete
               </Button>
             )}
-            <Button
-              variant="danger"
-              onClick={() => onDelete(todo._id)}
-            >
+            <Button variant="danger" onClick={() => onDelete(todo._id)}>
               Delete
             </Button>
           </Card.Body>
