@@ -18,7 +18,7 @@ const HomePage = () => {
   //Fetch data from  API
   const fetchData = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/todo");
+      const response = await fetch("http://127.0.0.1:8000/todo");
       if (!response.ok) {
         throw new Error("Veri alınamadı");
       }
@@ -33,7 +33,7 @@ const HomePage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/todo", {
+      const response = await fetch("http://127.0.0.1:8000/todo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const HomePage = () => {
   // DELETE Todo 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/todo/${id}`, {
+      const response = await fetch(`http://127.0.0.1:8000/todo/${id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
@@ -75,12 +75,12 @@ const HomePage = () => {
 
   const handleComplete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/todo/${id}`, {
+      const response = await fetch(`http://127.0.0.1:8000/todo/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ completed: true }),
+        body: JSON.stringify({ isDone: true }),
       });
       if (!response.ok) {
         throw new Error("Todo tamamlanamadı");
@@ -124,14 +124,15 @@ const HomePage = () => {
           display: "flex",
           justifyContent: "center",
           marginTop: "50px",
+         
         }}
         defaultActiveKey="todo"
         id="uncontrolled-tab-example"
         className="mb-3"
       >
-        <Tab eventKey="todo" title="todo" style={{ width: "40%" }}>
+        <Tab eventKey="todo" title="todo" style={{ width: "40%"  }}>
           <TodoList
-            todos={todoData.filter((todo) => !todo.completed)}
+            todos={todoData.filter((todo) => !todo.isDone)}
             onDelete={handleDelete}
             onComplete={handleComplete}
           />
@@ -142,7 +143,7 @@ const HomePage = () => {
           style={{ textDecoration: "line-through", width: "40%" }}
         >
           <TodoList
-            todos={todoData.filter((todo) => todo.completed)}
+            todos={todoData.filter((todo) => todo.isDone)}
             onDelete={handleDelete}
           />
         </Tab>
